@@ -1,0 +1,32 @@
+<html>
+    <meta charset="utf=8">
+
+<script>
+function rodaJogo(){
+  //Primeira fase do jogo:
+  var primeiraEscolha = primeiraFase();
+  if (primeiraEscolha == 2) {
+    //continua jogo
+      document.write("Continua jogo!");
+  } else {
+    //condicao de derrota
+    document.write("Derrotado!");
+  }
+  
+
+}
+
+function primeiraFase(){
+  
+  while (true) {
+    var resposta = prompt("Faça sua primeira escolha: 1 ou 2");
+    if (resposta == 2 || resposta == 1) {
+      return resposta;
+    }
+  }
+}
+
+rodaJogo();
+</script>
+
+</html>

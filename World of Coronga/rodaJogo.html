@@ -1,0 +1,84 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Metal Mania' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="rodaJogo_style.css">
+    <title>~ WORLD OF CORONA ~</title>
+
+</head>
+
+<body>
+
+  <main>
+    <img src="CODIV18.png" alt="Vírus">
+    <img src="CODIV18.png" alt="Vírus">
+    <img src="CODIV18.png" alt="Vírus">
+    <h1>World of CorongA</h1>
+    <img src="CODIV18.png" alt="Vírus">
+    <img src="CODIV18.png" alt="Vírus">
+    <img src="CODIV18.png" alt="Vírus">
+    <br>
+
+      <div class="box">
+      <p>bla bla bla historinha </p>
+
+    </div>
+
+    <button class="button" onclick="rodaJogo.html">>>1<<</button>
+    <button class="button" onclick="rodaJogo.html">>>2<<</button>
+    <button class="button" onclick="rodaJogo.html">>>3<<</button>
+
+  </main>
+
+</body>
+
+
+<script> 
+function rodaJogo() {
+  //condicao de vitoria
+  if (primeiraFase() == 1) {
+    if (segundaFase() == 1) {
+      document.write("Você venceu!");
+    } else {
+      document.write("Você não conseguiu! tente novamente")
+    }
+  } else {
+    //condicao de derrota
+    document.write("Você foi corongado e morreu")
+  }
+}
+
+function primeiraFase() {
+    
+    while(true) {
+       var escolha1 = prompt("Você é Fulano vivendo no mundo de coronga. Escolha 1 para ficar em casa, escolha 2 para sair de casa ");
+       if ((escolha1 == 1) || (escolha1 == 2)){
+          return escolha1;
+       }
+    }
+}
+
+function segundaFase() {
+    
+    while(true) {
+       var escolha2 = prompt("Fulano, você vai fazer os exercícios? 1. Sim , 2. Não");
+       if ((escolha2 == 1) || (escolha2 == 2)){
+          return escolha2;
+       }
+    }
+}
+
+
+</script>
+
+<footer>
+  <p> &#169 Resilia Educação </p> 
+  <p>2020</p>
+</footer>
+
+</html>
+
+
+

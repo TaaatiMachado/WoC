@@ -1,0 +1,104 @@
+    
+    body {
+        text-align: center;
+        background-color: #222831;
+        background-image: "";
+        margin-top: 10%;
+    }
+    
+    main {
+        margin: 45px
+    }
+
+    h1 {
+        display: inline;
+        font-family: 'Metal Mania';
+        font-size: 60px;
+        color: #29a19c;
+        font-weight: lighter;
+        padding-top: 8%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        
+    }
+
+    img {
+        display: inline-block;
+        margin: auto;
+    }
+    
+    main p {
+        padding: 15px
+    }
+
+    div p {
+        font-family: 'Press Start 2P';
+        color: #a3f7bf;
+       
+    }
+
+    .box {
+        display: absolute;
+        align-items: center;
+        border: 7px;
+        border-radius: 9px;
+        border-style: ridge; 
+        border-color: #29a19c;
+        padding: 15px;
+        width: 45%;  
+        margin: auto;  
+        margin-top: 60px;
+        margin-bottom: 60px;
+        background-color: rgb(25, 27, 31);
+    }
+
+   
+    .button {
+        font-family: 'Press Start 2P';
+        border: none;
+        border-radius: 15px;
+        color: #a3f7bf;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        background-color: rgb(25, 27, 31);
+    
+    }
+
+    footer {
+        font-family: 'Press Start 2P';
+        font-size: 10px;
+        background-color: #29a19c;
+        color: #222831;
+        position: absolute;
+        bottom: 0px;
+        align-items: center;
+        padding: 3px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) { 
+        body{ 
+            display: flex;
+            flex-flow: column;
+        }
+        
+        h1{
+            text-align: center;
+            font-size: 70px;
+    }
+
+        .box {
+            width: 70%
+        }
+
+        
+    
+
+    
