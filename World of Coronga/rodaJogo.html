@@ -12,13 +12,13 @@
 <body>
 
   <main>
-    <img src="CODIV18.png" alt="Vírus">
-    <img src="CODIV18.png" alt="Vírus">
-    <img src="CODIV18.png" alt="Vírus">
+    <img src="Coronga.gif" alt="Vírus">
+    <img src="Coronga.gif" alt="Vírus">
+    <img src="Coronga.gif" alt="Vírus">
     <h1>World of CorongA</h1>
-    <img src="CODIV18.png" alt="Vírus">
-    <img src="CODIV18.png" alt="Vírus">
-    <img src="CODIV18.png" alt="Vírus">
+    <img src="Coronga.gif" alt="Vírus">
+    <img src="Coronga.gif" alt="Vírus">
+    <img src="Coronga.gif" alt="Vírus">
     <br>
 
       <div class="box">
@@ -26,53 +26,198 @@
 
     </div>
 
-    <button class="button" onclick="rodaJogo.html">>>1<<</button>
-    <button class="button" onclick="rodaJogo.html">>>2<<</button>
-    <button class="button" onclick="rodaJogo.html">>>3<<</button>
+    <button class="button" onclick="xxxxxx">>>1<<</button>
+    <button class="button" onclick="xxxxxx">>>2<<</button>
+    <button class="button" onclick="xxxxxx">>>3<<</button>
 
   </main>
 
-</body>
-
-
 <script> 
 function rodaJogo() {
-  //condicao de vitoria
-  if (primeiraFase() == 1) {
-    if (segundaFase() == 1) {
-      document.write("Você venceu!");
+
+
+
+}
+
+function emCasa(escolha) {
+  "A pandemia do CorongaVírus tomou a cidade e está se espalhando por todo o país! Como pesquisador, você tem a obrigação moral de fazer tudo ao se alcance para encontrar uma vacina e proteger as pessoas. Por outro lado, o corte nas verbas da pesquisa deixa tudo mais difícil. O que você faz?"
+    if (var escolha == "Vambora!") {
+      return escolheItem();
+    }
+    if (var escolha == "Vou nada, tá maluco?!") {
+      return emCasaVitoria ();
     } else {
-      document.write("Você não conseguiu! tente novamente")
+      return emCasa ();
     }
-  } else {
-    //condicao de derrota
-    document.write("Você foi corongado e morreu")
+}
+
+function escolheItem(escolha) { // checkbox?
+    if (var escolha == "Guarda-chuva" && "Máscara") {
+      return transPub();
+    }
+    if (var escolha == "Chave do carro" && "Máscara") {
+      return carro();
+    } else {
+      return corongaDeath();
+    }
+}
+
+function emCasaVitoria(escolha) { // VITÓRIA
+    "Você ficou em casa e ganhou mais um dia de vida! Começar de novo?"
+     if (var escolha == "Restart") {
+      return emCasa();
+    }
+    if (var escolha == "Já chega") {
+      return "GAME OVER"
+      break;
+    }
+}
+
+
+function transPub() {
+    "Boa! Você tá protegido e a chuvarada não vai te pegar desprevenido!"
+    return vaiPraOnde();
+    }
+
+function carro() {
+    "Boa! Você tá protegido e consegue chegar onde quiser com seu fusquinha fiel companheiro! Não esqueça de abrir as janelas pra circulação de ar (e pra você não morrer de calor, né?)!"
+    return vaiPraOnde();
+    }
+
+function vaiPraOnde(escolha) {
+  "Pra onde você vai?"
+  if (var escolha == "Faculdade") {
+      return faculdade();
+    }
+  if (var escolha == "Agência da Caixa") {
+      return agDaCaixa();
+    } else {
+      return vaiPraOnde();
+    }
+}
+
+function corongaDeath(escolha) { // DERROTA
+    "Você foi infectado e a vacina ainda não foi descoberta! Você não conseguiu vaga no hospital de campanha e sucumbiu ao vírus. Começar de novo?"
+   if (var escolha == "Restart") {
+      return emCasa();
+    }
+  if (var escolha == "Já chega") {
+      return "GAME OVER"
+      break;
+    }
   }
-}
 
-function primeiraFase() {
-    
-    while(true) {
-       var escolha1 = prompt("Você é Fulano vivendo no mundo de coronga. Escolha 1 para ficar em casa, escolha 2 para sair de casa ");
-       if ((escolha1 == 1) || (escolha1 == 2)){
-          return escolha1;
-       }
+  function faculdade(escolha) {
+  "Você chegou na faculdade, seu centro de conhecimento! Aqui é onde você desenvolve suas habilidades profissionais e sociais. Pra onde você vai?"
+  if (var escolha == "Laboratório") {
+      return condiçãoLab();
+    }
+  if (var escolha == "Choppada") {
+      return choppada();
+    } else {
+      return faculdade();
     }
 }
 
-function segundaFase() {
-    
-    while(true) {
-       var escolha2 = prompt("Fulano, você vai fazer os exercícios? 1. Sim , 2. Não");
-       if ((escolha2 == 1) || (escolha2 == 2)){
-          return escolha2;
-       }
+function condiçãoLab(escolha) {
+  "Hora de salvar o mundo! Você tá com a chave?"
+  if (var escolha == "Tô!") {
+      return laboratorio();
+    }
+  if (var escolha == "Chave?") {
+      return chaveLab();
+    } else {
+    return condiçãoLab();
     }
 }
+
+function laboratorio(escolha) {
+  "Ah, como é bom estar na sua (outra) casa. Agora é trabalhar! O que você faz?"
+  if (var escolha == "Amostra de Vacinas") {
+      return vacina();
+    }
+  if (var escolha == "Experimentos com Cloroquina") {
+      return cloroquina();
+    } else {
+      return laboratorio();
+    }
+}
+
+function chaveLab() {
+  "Você precisa da chave para abrir o laboratório! Provavelmente ela está com o seu Professor..."
+    return vaiPraOnde();
+    }
+}
+
+function vacina() {
+  "Você conseguiu desenvolver anticorpos com a vacina! Finalmente você está preparado para a Grande Batalha no Planalto do Bolsodrácula!"
+    return grandeBatalha();
+    }
+}
+
+function cloroquina() {
+  "Você não conseguiu resultados efetivos! Deveria parar de perder tempo com essa idéia de girico do seu amigo terraplanista..."
+    return laboratorio();
+    }
+}
+
+function choppada() {
+  "Qual foi a última vez mesmo que você bebeu? No Reveillon de dois anos atrás? Ah, é! Taí um bom motivo pro seu fígado estar gritando 'PARA COM ESSA PORRA, MALUCO!' de tanto tentar filtrar tudo isso aí que você ingeriu. Que bom que seus amigos estavam por perto e te salvaram desse vexame!"
+    return emCasa();
+    }
+}
+
+function agDaCaixa(escolha) {
+  "Um belo dia para ir ao banco. Você escolhe qual fila? 1- Caixa eletrônico, 2- Fila da direita (2 idosos), 3- Fila da esquerda (5 pessoas)"
+  if (var escolha == "1") {
+    "Você não trouxe seu Cartão Cidadão..."
+      return agDaCaixa();
+    }
+  if (var escolha == "2") {
+    "Fila Preferencial: volte para o atendimento padrão"
+      return agDaCaixa();
+    } 
+  if (var escolha = "3") {
+      return corongaVoucher();
+    } else {
+      return agDaCaixa();
+    }
+  
+}
+
+function corongaVoucher(escolha) {
+  "DINHEIRO! GRAÇAS AOS CÉUS! O que você faz?"
+  if (var escolha == "BORA PRO CHURRAS") {
+      return corongaDeath();
+    }
+  if (var escolha == "PARTIU BRASILIA, IRMÃO!") {
+      return brasiliaTrip();
+    } else {
+      return corongaVoucher();
+    }
+}
+
+function corongaVoucher(escolha) {
+  "DINHEIRO! GRAÇAS AOS CÉUS! O que você faz?"
+  if (var escolha == "BORA PRO CHURRAS") {
+      return corongaDeath();
+    }
+  if (var escolha == "PARTIU BRASILIA, IRMÃO!") {
+      return brasiliaTrip();
+    } else {
+      return corongaVoucher();
+    }
+}
+
+
+
+
+
+
 
 
 </script>
-
+</body>
 <footer>
   <p> &#169 Resilia Educação </p> 
   <p>2020</p>
