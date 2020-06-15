@@ -49,12 +49,13 @@
         border-style: ridge; 
         border-color: #29a19c;
         padding: 15px;
-        width: 45%; 
+        width: 55%; 
         margin: auto;  
         margin-top: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         background-color: rgb(25, 27, 31);
         text-align: center;
+    
     }
 
    
@@ -63,13 +64,14 @@
         border: none;
         border-radius: 15px;
         color: #a3f7bf;
-        padding: 15px 32px;
+        padding: 15px 10px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
         background-color: rgb(25, 27, 31);
+        cursor: pointer;
     
     }
 
@@ -88,22 +90,33 @@
 
 
 
-    @media (max-width: 768px) { 
-        body{ 
+    @media (max-width: 1000px) { 
+
+        header {
             display: flex;
-            flex-flow: column;
         }
         
         h1{
-            text-align: center;
-            font-size: 70px;
-    }
-
-        .box {
-            width: 70%
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                font-size: 70px;
+                padding: 5px;
+        }
+    
+        .histbox {
+                width: 100%;
+                box-sizing: border-box;
+        }
+        
+        div p {
+            width: auto;
+            
+            
         }
 
         
-    
+          
+
 
     

@@ -4,30 +4,11 @@
             var btn1 = document.querySelector("#btn-1");
             var btn2 = document.querySelector("#btn-2");
             var btn3 = document.querySelector("#btn-3");
-
-/*
-        function btnFactory(type, id, classe, content){
-            let elementCreated = document.createElement(`${type}`);
-            elementCreated.setAttribute('id', `${id}`);
-            elementCreated.classList.add(`${classe}`);
-            elementCreated.innerText = `${content}`;
-          
-            return elementCreated;
-        }
-            
-        function deleteElement(id, classePai){
-            let element = document.getElementById(`${id}`);
-            classePai.removeChild(element)
-        }
-
-        function deletaBtn (btn1, btn2, btn3) {
-            deleteElement ('btn-1', 'button' )
-        }
-
-        */
+            var chave = false;
+            var voucher = false;
 
         function emCasa() {
-            historia.innerText = "A pandemia do CorongaVírus tomou a cidade e está se espalhando por todo o país! Como pesquisador, você tem a obrigação moral de fazer tudo ao se alcance para encontrar uma vacina e proteger as pessoas. Por outro lado, o corte nas verbas da pesquisa deixa tudo mais difícil. O que você faz?";
+            historia.textContent = "A pandemia do CorongaVírus tomou a cidade e está se espalhando por todo o país! Como pesquisador, você tem a obrigação moral de fazer tudo ao se alcance para encontrar uma vacina e proteger as pessoas. Por outro lado, o corte nas verbas da pesquisa deixa tudo mais difícil. O que você faz?";
 
             btn1.innerText = ">>Sai de casa<<";
             btn2.innerText = ">>Fica em casa<<";
@@ -44,7 +25,8 @@
         }
 
         function escolheItem() { 
-            historia.innerText = "Escolha dois itens para levar com você: 1- Máscara & guarda-chuva; 2- Máscara e chave do carro; 3- Guarda-chuva e chave do carro.";
+            
+            historia.textContent = "Escolha dois itens para levar com você: 1- Máscara & guarda-chuva; 2- Máscara e chave do carro; 3- Guarda-chuva e chave do carro.";
 
             btn1.innerText = ">>1<<";
             btn2.innerText = ">>2<<";
@@ -112,7 +94,7 @@
 
         function transPub() {
             historia.innerText = "Boa! Você tá protegido e a chuvarada não vai te pegar desprevenido!";
-  
+        
             btn1.innerText = ">>Continuar<<";
             btn2.innerText = ">>2<<";
             btn3.innerText = ">>3<<";
@@ -149,7 +131,7 @@
 
             btn1.innerText = ">>Faculdade<<";
             btn2.innerText = ">>Ag. Caixa<<";
-            btn3.innerText = ">>Pra casa<<";
+            btn3.innerText = ">>Pra Brasília<<";
 
             btn1.style.display = "inline-block";
             btn2.style.display = "inline-block";    
@@ -157,7 +139,7 @@
 
             btn1.onclick = faculdade;
             btn2.onclick = agDaCaixa;
-            btn3.onclick = emCasa;
+            btn3.onclick = brasiliaTrip;
         }
 
         function faculdade() {
@@ -179,18 +161,36 @@
         function condiçãoLab() {
             historia.innerText = "Hora de salvar o mundo! Você tá com a chave?";
 
+          if (chave == true) {
             btn1.innerText = ">>Tô!<<";
             btn2.innerText = ">>Chave?!<<";
             btn3.innerText = ">>Ah, desisto...<<";
 
             btn1.style.display = "inline-block";
-            btn2.style.display = "inline-block";
-            btn3.style.display = "inline-block";
+            btn2.style.display = "none";
+            btn3.style.display = "none";
 
             btn1.onclick = laboratorio;
             btn2.onclick = chaveLab;
             btn3.onclick = gameOver;  
-        
+          }
+
+          if (chave == false) {
+          
+              btn1.innerText = ">>Tô!<<";
+              btn2.innerText = ">>Chave?!<<";
+              btn3.innerText = ">>Ah, desisto...<<";
+  
+              btn1.style.display = "none";
+              btn2.style.display = "inline-block";
+              btn3.style.display = "inline-block";
+  
+              btn1.onclick = laboratorio;
+              btn2.onclick = chaveLab;
+              btn3.onclick = gameOver;  
+          }
+
+
         }
 
         function laboratorio() {
@@ -221,7 +221,7 @@
             btn2.style.display = "none";
             btn3.style.display = "none";
 
-            btn1.onclick = emCasa;
+            btn1.onclick = vaiPraOnde;
             //btn2.onclick = cloroquina;
             //btn3.onclick = gameOver;
 
@@ -298,15 +298,15 @@
             historia.innerText = "Você não trouxe o Cartão Cidadão! O que vai fazer agora?";
 
             btn1.innerText = ">>MERDA!<<";
-            btn2.innerText = ">>2<<";
+            btn2.innerText = ">>Odeio pessoas<<";
             btn3.innerText = ">>3<<";
 
             btn1.style.display = "inline-block";
-            btn2.style.display = "none";
+            btn2.style.display = "inline-block";
             btn3.style.display = "none";
 
             btn1.onclick = agDaCaixa;
-          //btn2.onclick = emCasa;
+            btn2.onclick = emCasa;
           //btn3.onclick = emCasa;
 
         }     
@@ -315,20 +315,22 @@
             historia.innerText = "Essa é a fila preferencial, você não pode ficar aqui! O que vai fazer agora?";
 
             btn1.innerText = ">>Ok,ok...<<";
-            btn2.innerText = ">>2<<";
+            btn2.innerText = ">>Cansei de ser otário<<";
             btn3.innerText = ">>3<<";
 
             btn1.style.display = "inline-block";
-            btn2.style.display = "none";
+            btn2.style.display = "inline-block";
             btn3.style.display = "none";
 
             btn1.onclick = agDaCaixa;
-          //btn2.onclick = emCasa);
+            btn2.onclick = emCasa;
           //btn3.onclick = emCasa);
         }
 
         function corongaVoucher() {
             historia.innerText = "DINHEIRO! GRAÇAS AOS CÉUS! O que você faz?";
+            
+            voucher = true;
 
             btn1.innerText = ">>BORA PRO CHURRAS!<<";
             btn2.innerText = ">>PARTIU BRASILIA, IRMÃO!<<";
@@ -347,6 +349,7 @@
         function brasiliaTrip() {
             historia.innerText = "Como você pretende chegar a Brasília?";
 
+            if (voucher == true) {
             btn1.innerText = ">>Ônibus<<";
             btn2.innerText = ">>Avião<<";
             btn3.innerText = ">>3<<";
@@ -359,6 +362,23 @@
             btn2.onclick = vaiDeAvião;
           //btn3.onclick = emCasa);
         }
+            if (voucher == false) {
+            btn1.innerText = ">>Preciso de dinheiro<<";
+            btn2.innerText = ">>Avião<<";
+            btn3.innerText = ">>3<<";
+
+            btn1.style.display = "inline-block";
+            btn2.style.display = "none";
+            btn3.style.display = "none";
+
+            btn1.onclick = vaiPraOnde;
+            btn2.onclick = vaiDeAvião;
+          //btn3.onclick = emCasa);
+
+      }
+
+    }
+
  
         function vaiDeAvião() {
             historia.innerText ="Os aeropostos estão todos fechados devido à Pandemia do CorongaVírus."
@@ -444,6 +464,8 @@
         function gratidão () {
             historia.innerText ="Seu professor está em liberdade novamente! Você finalmente consegue pedir a chave do laboratório pra ele. Como demonstração de gratidão, ele te entrega as chaves do laboratório."
             
+            chave = true;
+
             btn1.innerText = ">>VAMBORA!<<";
             btn2.innerText = ">>2<<";
             btn3.innerText = ">>3<<";
