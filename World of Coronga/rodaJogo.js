@@ -1,4 +1,6 @@
 
+           
+            
             var histbox = document.querySelector(".histbox");
             var historia = document.querySelector("#historia");
             var btn1 = document.querySelector("#btn-1");
@@ -76,11 +78,12 @@
 
         }   
 
+       
         function gameOver () { //DERROTA
             historia.innerText ="Talvez você só esteja muito cansado para continuar... Clica em >>Restart<< se quiser começar de novo ou clica no x se quiser abandonar essa vida.";
 
             btn1.innerText = ">>Restart<<";
-            btn2.innerText = ">>2<<";
+            btn2.innerText = "    X    ";
             btn3.innerText = ">>3<<";
 
             btn1.style.display = "inline-block";
@@ -88,7 +91,7 @@
             btn3.style.display = "none";
 
             btn1.onclick = emCasa;
-          //btn2.onclick = choppada;
+          //btn2.onclick = abandonar;
           //btn3.onclick = emCasa;
         }
 
