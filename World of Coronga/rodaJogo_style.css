@@ -2,8 +2,9 @@
     body {
         text-align: center;
         background-color: #222831;
-        background-image: "";
-        margin-top: 10%;
+        margin-top: 6%;
+       
+        
     }
     
     main {
@@ -32,25 +33,28 @@
         padding: 15px
     }
 
-    div p {
+    #historia {
         font-family: 'Press Start 2P';
         color: #a3f7bf;
        
     }
 
-    .box {
-        display: absolute;
+    .histbox {
+        display: flex;
         align-items: center;
+        text-align: center;
+        justify-content: center;
         border: 7px;
         border-radius: 9px;
         border-style: ridge; 
         border-color: #29a19c;
         padding: 15px;
-        width: 45%;  
+        width: 45%; 
         margin: auto;  
         margin-top: 60px;
         margin-bottom: 60px;
         background-color: rgb(25, 27, 31);
+        text-align: center;
     }
 
    
@@ -71,17 +75,18 @@
 
     footer {
         font-family: 'Press Start 2P';
-        font-size: 10px;
+        font-size: 12px;
         background-color: #29a19c;
-        color: #222831;
-        position: absolute;
-        bottom: 0px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
         align-items: center;
-        padding: 3px;
-        width: 100%;
         padding: 10px;
-        box-sizing: border-box;
+        width: 100%;
+        
     }
+
+
 
     @media (max-width: 768px) { 
         body{ 
