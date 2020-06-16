@@ -64,6 +64,9 @@
         function corongaDeath() { // DERROTA
             historia.innerText = "Você foi infectado e a vacina ainda não foi descoberta! Você não conseguiu vaga no hospital de campanha e sucumbiu ao vírus. Começar de novo?";
 
+            chave = false;
+            voucher = false;
+
             btn1.innerText = ">>Restart<<";
             btn2.innerText = ">>Chega<<";
             btn3.innerText = ">>3<<";
@@ -81,6 +84,9 @@
        
         function gameOver () { //DERROTA
             historia.innerText ="Talvez você só esteja muito cansado para continuar... Clica em >>Restart<< se quiser começar de novo ou clica no x se quiser abandonar essa vida.";
+
+            chave = false;
+            voucher = false;
 
             btn1.innerText = ">>Restart<<";
             btn2.innerText = "    X    ";
@@ -176,9 +182,8 @@
             btn1.onclick = laboratorio;
             btn2.onclick = chaveLab;
             btn3.onclick = gameOver;  
-          }
-
-          if (chave == false) {
+          
+          } else {
           
               btn1.innerText = ">>Tô!<<";
               btn2.innerText = ">>Chave?!<<";
@@ -231,7 +236,7 @@
         }
 
         function vacina() {
-            historia.innerText = "Você conseguiu desenvolver anticorpos com a vacina! Finalmente você está preparado para a Grande Batalha no Planalto do Bolsodrácula!";
+            historia.innerText = "Você conseguiu desenvolver anticorpos com a vacina! Finalmente você está preparado para a Grande Batalha no Planalto do Bolsodrácula! Leve algumas amostras com você!";
 
             btn1.innerText = ">>Tô pronto!<<";
             btn2.innerText = ">>2<<";
@@ -364,8 +369,8 @@
             btn1.onclick = vaiDeBuzão;
             btn2.onclick = vaiDeAvião;
           //btn3.onclick = emCasa);
-        }
-            if (voucher == false) {
+        
+        } else {
             btn1.innerText = ">>Preciso de dinheiro<<";
             btn2.innerText = ">>Avião<<";
             btn3.innerText = ">>3<<";
@@ -459,7 +464,7 @@
             btn3.style.display = "none";
 
             btn1.onclick = gratidão;
-            btn2.onclick = emCasa;
+            btn2.onclick = gameOver;
           //btn3.onclick = corongaDeath;
 
         }
@@ -736,8 +741,8 @@
             btn3.innerText = ">>Se esconde<<";
 
             btn1.style.display = "inline-block";
-            btn2.style.display = "inline-block";
-            btn3.style.display = "inline-block";
+            btn2.style.display = "none";
+            btn3.style.display = "none";
 
             btn1.onclick = agradecimento;
           //btn2.onclick = epicWin;
